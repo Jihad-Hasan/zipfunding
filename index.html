@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>zipfunding</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+    <div class="header container-fluid border-bottom border-black border-2">
+        <div class="container">
+            <div class="row p-3">
+                <div class="col-md-6 d-flex">
+                    <div class="d-flex align-items-center header_logo_container">
+                        <img class="img-fluid" src="./img/header_logo.png" alt="logo">
+                    </div>
+                </div>
+                <div class="col-md-6 text-end">
+                    <p>The fastest way to Business Funding Solutions</p>
+                    <a class="btn header-btn" href="clkn/tel/8777093963"target="_top">
+                        <span class="label"><strong>(877) 709-3963</strong></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="hero container-fluid">
+        <div class="container py-3" style="max-width: 920px !important">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="text-center hero-title">
+                        Business Funding in as little as 24 hours
+                    </h2>
+                </div>
+                <div class="col-12 col-offset-2">
+                    <div class="progress mt-3" style="height: 10px">
+                        <div class="progress-bar" style="font-weight: bold; font-size: 15px" role="progressbar"
+                            aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <div class="card mt-3">
+                        <div class="card-body p-4 step" style="background-color: #30b970; border-radius: 15px">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <select class="form-select py-3 px-2 px-md-5" class="form-select is-invalid" id="validationServer04" aria-describedby="validationServer04Feedback" required>
+                                        <option value="">How Much Funding Do You Need?</option>
+                                        <option value="Under $20,000">Under $20,000</option>
+                                        <option value="$20,000 - $30,000">
+                                            $20,000 - $30,000
+                                        </option>
+                                        <option value="$30,000 - $40,000">
+                                            $30,000 - $40,000
+                                        </option>
+                                        <option value="$40,000 - $50,000">
+                                            $40,000 - $50,000
+                                        </option>
+                                        <option value="$50,000 - $75,000">
+                                            $50,000 - $75,000
+                                        </option>
+                                        <option value="$75,000 - $100,000">
+                                            $75,000 - $100,000
+                                        </option>
+                                        <option value="$100,000 - $150,000">
+                                            $100,000 - $150,000
+                                        </option>
+                                        <option value="$150,000 or more">$150,000 or more</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-4">
+                                    <button type="submit" class="action next  float-end btn btn-warning py-3 px-5">
+                                        Next
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-body p-4 step" style="background-color: #30b970;border-radius: 15px;display: none;">
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <select class="form-select py-3 px-5" aria-label="Default select example">
+                                            <option value="">Time in business</option>
+                                            <option value="less than 6 months">
+                                                less than 6 months
+                                            </option>
+                                            <option value="6 - 12 Months">6 - 12 Months</option>
+                                            <option value="1 - 2 Years">1 - 2 Years</option>
+                                            <option value="2 - 5 Years">2 - 5 Years</option>
+                                            <option value="5+ Years">5+ Years</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <button type="button" class="action next float-end btn btn-warning py-3 px-5">
+                                            Next
+                                        </button>
+                                    </div>
+                                </div>
+                        </div>
+
+                        <div class="card-body p-4 step" style="background-color: #30b970;border-radius: 15px;display: none;">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <select class="form-select py-3 px-5" aria-label="Default select example">
+                                        <option value="">Avg Banking Deposits/mo</option>
+                                        <option value="$0 - $5,000">$0 - $5,000</option>
+                                        <option value="$5,000 - $10,000">$5,000 - $10,000</option>
+                                        <option value="$10,000 - $20,000">
+                                            $10,000 - $20,000
+                                        </option>
+                                        <option value="$20,000 - $50,000">
+                                            $20,000 - $50,000
+                                        </option>
+                                        <option value="$50,000 - $100,000">
+                                            $50,000 - $100,000
+                                        </option>
+                                        <option value="$100,000 - $250,000">
+                                            $100,000 - $250,000
+                                        </option>
+                                        <option value="$250,000+">$250,000+</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-4">
+                                    <button type="button" class="action next float-end btn btn-warning py-3 px-5">
+                                        Next
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-body p-4 step" style="background-color: #30b970;border-radius: 15px;display: none;">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <select class="form-select py-3 px-5" aria-label="Default select example">
+                                        <option value="">Credit Score</option>
+                                        <option value="Imperfect credit (520-579)">
+                                            Imperfect credit (520-579)
+                                        </option>
+                                        <option value="Average  (580-639)">
+                                            Average (580-639)
+                                        </option>
+                                        <option value="Above average (640-719)">
+                                            Above average (640-719)
+                                        </option>
+                                        <option value="Excellent (720+)">Excellent (720+)</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-4">
+                                    <button type="button" class="action next float-end btn btn-warning py-3 px-5">
+                                        Next
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-body p-4 step" style="background-color: #30b970;border-radius: 15px;display: none;">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <label for="" class="text-white">Do You Have and Deposit Funds to a Business
+                                        Checking
+                                        Account *</label>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                            id="flexRadioDefault1" checked />
+                                        <label class="form-check-label text-white" for="flexRadioDefault1">
+                                            Yes
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                            id="flexRadioDefault2" />
+                                        <label class="form-check-label text-white" for="flexRadioDefault2">
+                                            No
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <button type="button" class="action next float-end btn btn-warning py-3 px-5">
+                                        Next
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-body p-4 step" style="background-color: #30b970;border-radius: 15px;display: none;">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <input class="form-control form-control-lg" type="email" id="email-step-6" placeholder="Email" aria-label=".form-control-lg example" />
+                                </div>
+                                <div class="col-md-4">
+                                    <button type="button" class="action next float-end btn btn-warning py-3 px-5" onclick="nextStepWithValidation(6)">Next</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-body p-4 step" style="background-color: #30b970;border-radius: 15px;display: none;">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <input class="form-control form-control-lg" type="text" placeholder="First Name"
+                                        aria-label=".form-control-lg example" />
+                                </div>
+                                <div class="col-md-4">
+                                    <button type="button" class="action next float-end btn btn-warning py-3 px-5">
+                                        Next
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-body p-4 step" style="background-color: #30b970;border-radius: 15px;display: none;">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <input class="form-control form-control-lg" type="text" placeholder="Last Name"
+                                        aria-label=".form-control-lg example" />
+                                </div>
+                                <div class="col-md-4">
+                                    <button type="button" class="action next float-end btn btn-warning py-3 px-5">
+                                        Next
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body p-4 step" style="background-color: #30b970;border-radius: 15px;display: none;">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <input class="form-control form-control-lg" type="tel" id="phone-step-10" placeholder="Phone Number" aria-label=".form-control-lg example" />
+                                </div>
+                                <div class="col-md-4">
+                                    <button type="button" class="action next float-end btn btn-warning py-3 px-5" onclick="nextStepWithValidation(10)">Next</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-body p-4 step" style="background-color: #30b970;border-radius: 15px;display: none;">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <input class="form-control form-control-lg" type="text" placeholder="Company Name"
+                                        aria-label=".form-control-lg example" />
+                                </div>
+                                <div class="col-md-4">
+                                    <button type="button" class="action next float-end btn btn-warning py-3 px-5">
+                                        Next
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-body p-4 step" style="background-color: #30b970;border-radius: 15px;display: none;">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <input class="form-control form-control-lg" type="email"
+                                        placeholder="What Industry is Your Business in?"
+                                        aria-label=".form-control-lg example" />
+                                </div>
+                                <div class="col-md-4">
+                                    <button type="button" class="action next float-end btn btn-warning py-3 px-5">
+                                        Next
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-body text-center p-5 step" style="display: none;">
+                            <h2 style="color: rgba(48,185,112,1);">Contratulations!</h2>
+                            <p class="simple-card-title">
+                                We have received your request and will contact you as soon as
+                                possible with an approval.
+                            </p>
+                        </div>
+
+                        <div class="text-center mt-3">
+                            <img src="./img/lock.png">
+                            <span>Privacy & Security Protected </span>
+                        </div>
+                        <div class="text-center mt-5">
+                            <img src="./img/ssl.png" />
+                            <img src="./img/mcafee.png" />
+                            <img src="./img/truste.png" />
+                        </div>
+                        <!-- <div class="card-footer">
+                            <button class="action back btn btn-sm btn-outline-warning" style="display: none">
+                                Back
+                            </button>
+                            <button class="action next btn btn-sm btn-outline-secondary float-end" style="display: none">
+                                Next
+                            </button>
+                            <button class="action submit btn btn-sm btn-outline-success float-end"
+                                style="display: none">
+                                Submit
+                            </button>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+      
+      
+        </div>
+    </div>
+
+    <div class="card-container">
+        <div class="container my-5">
+            <h5 class="sub_title text-center mb-3">OUR FUNDING SOLUTION</h5>
+            <h3 class="text-center">Grow your business with Zip Funding</h3>
+
+            <div class="row row-cols-1 mt-4 row-cols-md-3 g-4">
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="./img/small business.gif"
+                            class="card-img-top" alt="small business loans" />
+                        <div class="card-body">
+                            <h5 class="card-title mb-4">Small Business Loans</h5>
+                            <p class="card-text">
+                                Keeping your company running can be difficult, especially when
+                                it is small, or new. We offer small business working capitals
+                                for a range of purposes that can enable you to keep your
+                                employees, or buy the materials you need. Some small companies
+                                will also be able to get working capitals to expand their
+                                business and take it to the next level.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="./img/business Lines.gif"
+                            class="card-img-top" alt="business Lines" />
+                        <div class="card-body">
+                            <h5 class="card-title mb-4">Business Lines Of Credit</h5>
+                            <p class="card-text">
+                                Making sure you have enough cash around for your business
+                                needs is important. It can enable you to make purchases as
+                                needed, or to expand your business when you are ready for it.
+                                You can also add more staff or new equipment. A working
+                                capital can ensure you have the necessary money on hand, and
+                                you can be approved quickly for it.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="./img/merchant cash.gif"
+                            class="card-img-top" alt="merchant Cash" />
+                        <div class="card-body">
+                            <h5 class="card-title mb-4">Merchant Cash Advances</h5>
+                            <p class="card-text">
+                                When money gets a little tight for your business and you find
+                                that it is going to be difficult to meet upcoming expenses,
+                                you may be able to resolve your cash flow problems with
+                                merchant cash advance working capitals. We make these working
+                                capitals easy to obtain and the repayments come out
+                                automatically, leaving you nothing to worry about.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container my-5">
+            <div class="row">
+                <div class="col-md-6 d-flex onecolumn">
+                    <img class="img-fluid" src="./img/about_us.png" alt="about_us_img" srcset="">
+                </div>
+                <div class="col-md-6 onecolumn">
+                    <h5 class="sub_title mb-3">ABOUT US</h5>
+                    <h3 class="mb-3">A funding solution <br />for all sizes of <br />business</h3>
+                    <div class="row">
+                        <div class="col-md-6 two_column">
+
+                            <div style="height: auto">
+                                <p style="line-height: 16px; margin: 5px 0">
+                                    <span class="digit">99</span>
+                                    <span class="sign">%</span>
+                                </p>
+                                <p style="line-height: 16px">
+                                    <span class="digits_text">Customer satisfaction</span>
+                                </p>
+                            </div>
+                            <br />
+
+
+
+                            <div style="height: auto">
+                                <p style="line-height: 16px; margin: 5px 0">
+                                    <span class="digit">5K</span>
+                                    <span class="sign">+</span>
+                                </p>
+                                <p style="line-height: 16px">
+                                    <span class="digits_text">Clients</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 two_column">
+
+
+
+
+                            <div style="height: auto">
+                                <p style="line-height: 16px; margin: 5px 0">
+                                    <span class="digit">10M</span>
+                                    <span class="sign">+</span>
+                                </p>
+                                <p style="line-height: 16px">
+                                    <span class="digits_text">Funded</span>
+                                </p>
+                            </div>
+
+                            <br />
+
+
+
+
+
+
+
+
+                            <div style="height: auto">
+                                <p style="line-height: 16px; margin: 5px 0">
+                                    <span class="digit">95</span>
+                                    <span class="sign">%</span>
+                                </p>
+                                <p style="line-height: 16px">
+                                    <span class="digits_text">Approval Rating</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <p>
+                        <strong>Zip Funding</strong> offers access to working capital
+                        throughout the country to companies who have been in business for
+                        at least six months and meet the simple lending requirements of
+                        the program. We’re pleased to offer you easy access to the working
+                        capital you need and funding experience you won’t find anywhere
+                        else. We established our company in 2019 in response to large,
+                        traditional banks pulling back from the small and medium-sized
+                        lending market, just when businesses needed working capital more
+                        than ever to survive and grow. This struck a chord with Zip
+                        Funding’s founders who had owned and grown multiple businesses of
+                        their own. Zip Funding was created specifically to serve the
+                        unique financial needs of America’s small to medium-sized
+                        businesses. Our approach is rooted in our personal understanding
+                        that accessing working capital plays an important role in helping
+                        you compete in a demanding marketplace. We also understand the
+                        frustration of being denied access to financing or being subjected
+                        to an unnecessarily complicated or confusing process.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container simple-card my-5">
+            <h5 class="sub_title text-center mb-3">HOW IT WORKS</h5>
+            <h3 class="text-center">
+                Getting started is as <br />
+                easy as 1,2,3...
+            </h3>
+
+            <div class="row row-cols-1 mt-4 row-cols-md-3 g-4">
+                <div class="col">
+                    <div class="card h-100 b-0">
+                        <img src="https://d9hhrg4mnvzow.cloudfront.net/getfunded.zipfunding.co/086d7ca6-svgexport-7_105k05j000000000000028.png"
+                            class="card-img-top" alt="..." />
+                        <div class="card-body">
+                            <h5 class="simple-card-title mb-4">
+                                1. Submit application & bank statements
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://d9hhrg4mnvzow.cloudfront.net/getfunded.zipfunding.co/6031f12a-svgexport-8_105k05k05k05j000000028.png"
+                            class="card-img-top" alt="..." />
+                        <div class="card-body">
+                            <h5 class="simple-card-title mb-4">2. Review and accept offer</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://d9hhrg4mnvzow.cloudfront.net/getfunded.zipfunding.co/75b45669-svgexport-9_105k05k05k05j000000028.png"
+                            class="card-img-top" alt="..." />
+                        <div class="card-body">
+                            <h5 class="simple-card-title mb-4">3. Get funded</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="review container-fluid py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="text-center content">
+                        <img src="./img/fivestar.png" alt="fiveStar">
+                        <p class="text-center">
+                            <span class="content_text" style="font-size: 24px;font-weight: 400;font-style: normal;">Thank you Zip Funding for
+                                your help in the process of
+                                getting my working capital i will continue to do business in
+                                the future because when i lost hope &nbsp;and your company
+                                help me out and i will never forget that thank you!!!
+                            </span>
+                        </p>
+                        <p style="text-align: center; line-height: 26px">
+                            <span class="owner_name">Andrew B - &nbsp;</span>
+                            <span class="owner_title">Owner of The Brewseum Bar</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container mt-4">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="text-center content">
+                        <img src="./img/fivestar.png" alt="fiveStar">
+                        <p class="text-center">
+                            <span class="content_text">
+                                Thank Ashley was my funding manager and she is a very
+                                competent and caring person. It was a pleasure to work with
+                                her. She is a good listener and he helped me get a working
+                                capital in short order. Thank you Ashley for your help!
+                            </span>
+                        </p>
+                        <p style="text-align: center; line-height: 26px">
+                            <span class="owner_name">Valerian M -
+                                &nbsp;</span>
+                            <span class="owner_title">Owner, Elite
+                                Designer</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-container1">
+        <div class="container my-5">
+            <h5 class="sub_title text-center mb-3">COMMON QUESTIONS</h5>
+            <h3 class="text-center">Frequently Asked Questions</h3>
+
+            <div class="row row-cols-1 row-cols-md-2 mt-3 g-4">
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                            <div style="display: flex;align-items: flex-start;justify-content: space-between;">
+                                <h5 class="card-title">
+                                    I have poor credit. Will I still be approved?
+                                </h5>
+                                <img src="https://d9hhrg4mnvzow.cloudfront.net/getfunded.zipfunding.co/b2ef8a72-svgexport-12_1000000000000000000028.png">
+                            </div>
+
+                            <p class="card-text">
+                                Yes. We can still get the funds for your business; however,
+                                the program is slightly modified. We have a starter package
+                                that you can join. Once your funding specialist understands
+                                you, and your business, your credit score becomes irrelevant.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                            <div style="display: flex;align-items: flex-start;justify-content: space-between;">
+                                <h5 class="card-title">
+                                    What can I use the working capital for?
+                                </h5>
+                                <img src="./img/chevron-down.svg">
+                            </div>
+                            <p class="card-text">
+                                You can use your merchant cash advance towards any activity
+                                which will assist in the growth of your business or the
+                                maximization of profit. This can include expansions, acquiring
+                                new or additional inventory, purchasing new technologies or
+                                equipment, etc.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                            <div style="display: flex;align-items: flex-start;justify-content: space-between;">
+                                <h5 class="card-title">When will I receive the funds?</h5>
+                                <img src="./img/chevron-down.svg">
+                            </div>
+                            <p class="card-text">
+                                You could have your money in your business bank account by the
+                                end of the business day! Our team works efficiently as
+                                possible to ensure that you receive your desired advance as
+                                timely as possible. Call, Email or apply online now to be in
+                                touch with one of our funding managers!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                            <div style="display: flex;align-items: flex-start;justify-content: space-between;">
+                                <h5 class="card-title">
+                                    How much money would I be eligible for?
+                                </h5>
+                                <img src="./img/chevron-down.svg">
+                            </div>
+                            <p class="card-text">
+                                You can receive an advance of as little as $10,000 to a maximum of $250,000 depending on
+                                different factors.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid contact_container">
+        <div class="container py-4">
+            <div class="contact">
+                <h2>Contact Us <img style="margin-bottom: 15px;"src="./img/rocket.png"></h2>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid footer_container">
+        <div class="container ">
+            <div class="row f-logo py-4">
+                <img class="mb-3" src="./img/footer_logo.png">
+                <span>We are proud to support businesses of all types.</span>
+            </div>
+
+            <div class="row py-5">
+                <div class="col-md-6">
+                    <p class="copyright-text">Copyright © All rights reserved by Zip Funding LLC 2023</p>
+                </div>
+                <div class="col-md-6 mx-auto d-flex footer_link">
+                    <a class="btn text-white p-0" href="https://zipfunding.co/privacy" target="_self">Privacy Policy
+                        |</a>
+                    <a class="btn text-white p-0" href="https://zipfunding.co/terms" target="_self">Terms of
+                        Service</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
