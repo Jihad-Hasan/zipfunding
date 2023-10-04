@@ -253,7 +253,8 @@ label {
 .footer_link {
     justify-content: end;
 }
-.form-control-red{
+
+.form-control-red {
     border-color: red;
     box-shadow: 0 0 0 0.25rem red;
 }

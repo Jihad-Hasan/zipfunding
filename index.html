@@ -21,7 +21,7 @@
                 </div>
                 <div class="col-md-6 text-end">
                     <p>The fastest way to Business Funding Solutions</p>
-                    <a class="btn header-btn" href="clkn/tel/8777093963"target="_top">
+                    <a class="btn header-btn" href="clkn/tel/8777093963" target="_top">
                         <span class="label"><strong>(877) 709-3963</strong></span>
                     </a>
                 </div>
@@ -46,7 +46,7 @@
                         <div class="card-body p-4 step" style="background-color: #30b970; border-radius: 15px">
                             <div class="row">
                                 <div class="col-md-8">
-                                    <select class="form-select py-3 px-2 px-md-5" class="form-select is-invalid" id="validationServer04" aria-describedby="validationServer04Feedback" required>
+                                    <select class="form-select fundingNeed py-3 px-2 px-md-5" id="validation">
                                         <option value="">How Much Funding Do You Need?</option>
                                         <option value="Under $20,000">Under $20,000</option>
                                         <option value="$20,000 - $30,000">
@@ -78,32 +78,36 @@
                             </div>
                         </div>
 
-                        <div class="card-body p-4 step" style="background-color: #30b970;border-radius: 15px;display: none;">
-                                <div class="row">
-                                    <div class="col-md-8">
-                                        <select class="form-select py-3 px-5" aria-label="Default select example">
-                                            <option value="">Time in business</option>
-                                            <option value="less than 6 months">
-                                                less than 6 months
-                                            </option>
-                                            <option value="6 - 12 Months">6 - 12 Months</option>
-                                            <option value="1 - 2 Years">1 - 2 Years</option>
-                                            <option value="2 - 5 Years">2 - 5 Years</option>
-                                            <option value="5+ Years">5+ Years</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <button type="button" class="action next float-end btn btn-warning py-3 px-5">
-                                            Next
-                                        </button>
-                                    </div>
-                                </div>
-                        </div>
-
-                        <div class="card-body p-4 step" style="background-color: #30b970;border-radius: 15px;display: none;">
+                        <div class="card-body p-4 step"
+                            style="background-color: #30b970;border-radius: 15px;display: none;">
                             <div class="row">
                                 <div class="col-md-8">
-                                    <select class="form-select py-3 px-5" aria-label="Default select example">
+                                    <select class="form-select timeInBusiness py-3 px-5"
+                                        aria-label="Default select example" id="validation">
+                                        <option value="">Time in business</option>
+                                        <option value="less than 6 months">
+                                            less than 6 months
+                                        </option>
+                                        <option value="6 - 12 Months">6 - 12 Months</option>
+                                        <option value="1 - 2 Years">1 - 2 Years</option>
+                                        <option value="2 - 5 Years">2 - 5 Years</option>
+                                        <option value="5+ Years">5+ Years</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-4">
+                                    <button type="button" class="action next float-end btn btn-warning py-3 px-5">
+                                        Next
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-body p-4 step"
+                            style="background-color: #30b970;border-radius: 15px;display: none;">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <select class="form-select avgBankingDeposits py-3 px-5"
+                                        aria-label="Default select example" id="validation">
                                         <option value="">Avg Banking Deposits/mo</option>
                                         <option value="$0 - $5,000">$0 - $5,000</option>
                                         <option value="$5,000 - $10,000">$5,000 - $10,000</option>
@@ -130,10 +134,12 @@
                             </div>
                         </div>
 
-                        <div class="card-body p-4 step" style="background-color: #30b970;border-radius: 15px;display: none;">
+                        <div class="card-body p-4 step"
+                            style="background-color: #30b970;border-radius: 15px;display: none;">
                             <div class="row">
                                 <div class="col-md-8">
-                                    <select class="form-select py-3 px-5" aria-label="Default select example">
+                                    <select class="form-select creditScore py-3 px-5"
+                                        aria-label="Default select example" id="validation">
                                         <option value="">Credit Score</option>
                                         <option value="Imperfect credit (520-579)">
                                             Imperfect credit (520-579)
@@ -155,7 +161,8 @@
                             </div>
                         </div>
 
-                        <div class="card-body p-4 step" style="background-color: #30b970;border-radius: 15px;display: none;">
+                        <div class="card-body p-4 step"
+                            style="background-color: #30b970;border-radius: 15px;display: none;">
                             <div class="row">
                                 <div class="col-md-8">
                                     <label for="" class="text-white">Do You Have and Deposit Funds to a Business
@@ -184,21 +191,26 @@
                             </div>
                         </div>
 
-                        <div class="card-body p-4 step" style="background-color: #30b970;border-radius: 15px;display: none;">
+                        <div class="card-body p-4 step"
+                            style="background-color: #30b970;border-radius: 15px;display: none;">
                             <div class="row">
                                 <div class="col-md-8">
-                                    <input class="form-control form-control-lg" type="email" id="email-step-6" placeholder="Email" aria-label=".form-control-lg example" />
+                                    <input class="form-control form-control-lg" type="email" id="email-step-6"
+                                        placeholder="Email" aria-label=".form-control-lg example" />
                                 </div>
                                 <div class="col-md-4">
-                                    <button type="button" class="action next float-end btn btn-warning py-3 px-5" onclick="nextStepWithValidation(6)">Next</button>
+                                    <button type="button" class="float-end btn btn-warning py-3 px-5"
+                                        onclick="nextStepWithValidation(6)">Next</button>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="card-body p-4 step" style="background-color: #30b970;border-radius: 15px;display: none;">
+                        <div class="card-body p-4 step"
+                            style="background-color: #30b970;border-radius: 15px;display: none;">
                             <div class="row">
                                 <div class="col-md-8">
-                                    <input class="form-control form-control-lg" type="text" placeholder="First Name"
+                                    <input class="form-control firstName form-control-lg" type="text"
+                                        placeholder="First Name" id="validation"
                                         aria-label=".form-control-lg example" />
                                 </div>
                                 <div class="col-md-4">
@@ -209,10 +221,40 @@
                             </div>
                         </div>
 
-                        <div class="card-body p-4 step" style="background-color: #30b970;border-radius: 15px;display: none;">
+                        <div class="card-body p-4 step"
+                            style="background-color: #30b970;border-radius: 15px;display: none;">
                             <div class="row">
                                 <div class="col-md-8">
-                                    <input class="form-control form-control-lg" type="text" placeholder="Last Name"
+                                    <input class="form-control lastName form-control-lg" type="text"
+                                        placeholder="Last Name" id="validation" aria-label=".form-control-lg example" />
+                                </div>
+                                <div class="col-md-4">
+                                    <button type="button" class="action next float-end btn btn-warning py-3 px-5">
+                                        Next
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body p-4 step"
+                            style="background-color: #30b970;border-radius: 15px;display: none;">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <input class="form-control form-control-lg" type="tel" id="phone-step-10"
+                                        placeholder="Phone Number" aria-label=".form-control-lg example" />
+                                </div>
+                                <div class="col-md-4">
+                                    <button type="button" class="float-end btn btn-warning py-3 px-5"
+                                        onclick="nextStepWithValidation(9)">Next</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-body p-4 step"
+                            style="background-color: #30b970;border-radius: 15px;display: none;">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <input class="form-control companyName form-control-lg" type="text"
+                                        placeholder="Company Name" id="validation"
                                         aria-label=".form-control-lg example" />
                                 </div>
                                 <div class="col-md-4">
@@ -222,41 +264,18 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card-body p-4 step" style="background-color: #30b970;border-radius: 15px;display: none;">
-                            <div class="row">
-                                <div class="col-md-8">
-                                    <input class="form-control form-control-lg" type="tel" id="phone-step-10" placeholder="Phone Number" aria-label=".form-control-lg example" />
-                                </div>
-                                <div class="col-md-4">
-                                    <button type="button" class="action next float-end btn btn-warning py-3 px-5" onclick="nextStepWithValidation(10)">Next</button>
-                                </div>
-                            </div>
-                        </div>
 
-                        <div class="card-body p-4 step" style="background-color: #30b970;border-radius: 15px;display: none;">
+                        <div class="card-body p-4 step"
+                            style="background-color: #30b970;border-radius: 15px;display: none;">
                             <div class="row">
                                 <div class="col-md-8">
-                                    <input class="form-control form-control-lg" type="text" placeholder="Company Name"
-                                        aria-label=".form-control-lg example" />
-                                </div>
-                                <div class="col-md-4">
-                                    <button type="button" class="action next float-end btn btn-warning py-3 px-5">
-                                        Next
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card-body p-4 step" style="background-color: #30b970;border-radius: 15px;display: none;">
-                            <div class="row">
-                                <div class="col-md-8">
-                                    <input class="form-control form-control-lg" type="email"
+                                    <input class="form-control businessIndustry form-control-lg" type="text"
                                         placeholder="What Industry is Your Business in?"
                                         aria-label=".form-control-lg example" />
                                 </div>
                                 <div class="col-md-4">
                                     <button type="button" class="action next float-end btn btn-warning py-3 px-5">
-                                        Next
+                                        Submit
                                     </button>
                                 </div>
                             </div>
@@ -279,23 +298,9 @@
                             <img src="./img/mcafee.png" />
                             <img src="./img/truste.png" />
                         </div>
-                        <!-- <div class="card-footer">
-                            <button class="action back btn btn-sm btn-outline-warning" style="display: none">
-                                Back
-                            </button>
-                            <button class="action next btn btn-sm btn-outline-secondary float-end" style="display: none">
-                                Next
-                            </button>
-                            <button class="action submit btn btn-sm btn-outline-success float-end"
-                                style="display: none">
-                                Submit
-                            </button>
-                        </div> -->
                     </div>
                 </div>
             </div>
-      
-      
         </div>
     </div>
 
@@ -307,8 +312,7 @@
             <div class="row row-cols-1 mt-4 row-cols-md-3 g-4">
                 <div class="col">
                     <div class="card h-100">
-                        <img src="./img/small business.gif"
-                            class="card-img-top" alt="small business loans" />
+                        <img src="./img/small business.gif" class="card-img-top" alt="small business loans" />
                         <div class="card-body">
                             <h5 class="card-title mb-4">Small Business Loans</h5>
                             <p class="card-text">
@@ -324,8 +328,7 @@
                 </div>
                 <div class="col">
                     <div class="card h-100">
-                        <img src="./img/business Lines.gif"
-                            class="card-img-top" alt="business Lines" />
+                        <img src="./img/business Lines.gif" class="card-img-top" alt="business Lines" />
                         <div class="card-body">
                             <h5 class="card-title mb-4">Business Lines Of Credit</h5>
                             <p class="card-text">
@@ -341,8 +344,7 @@
                 </div>
                 <div class="col">
                     <div class="card h-100">
-                        <img src="./img/merchant cash.gif"
-                            class="card-img-top" alt="merchant Cash" />
+                        <img src="./img/merchant cash.gif" class="card-img-top" alt="merchant Cash" />
                         <div class="card-body">
                             <h5 class="card-title mb-4">Merchant Cash Advances</h5>
                             <p class="card-text">
@@ -380,9 +382,6 @@
                                 </p>
                             </div>
                             <br />
-
-
-
                             <div style="height: auto">
                                 <p style="line-height: 16px; margin: 5px 0">
                                     <span class="digit">5K</span>
@@ -394,10 +393,6 @@
                             </div>
                         </div>
                         <div class="col-md-6 two_column">
-
-
-
-
                             <div style="height: auto">
                                 <p style="line-height: 16px; margin: 5px 0">
                                     <span class="digit">10M</span>
@@ -409,13 +404,6 @@
                             </div>
 
                             <br />
-
-
-
-
-
-
-
 
                             <div style="height: auto">
                                 <p style="line-height: 16px; margin: 5px 0">
@@ -500,7 +488,8 @@
                     <div class="text-center content">
                         <img src="./img/fivestar.png" alt="fiveStar">
                         <p class="text-center">
-                            <span class="content_text" style="font-size: 24px;font-weight: 400;font-style: normal;">Thank you Zip Funding for
+                            <span class="content_text"
+                                style="font-size: 24px;font-weight: 400;font-style: normal;">Thank you Zip Funding for
                                 your help in the process of
                                 getting my working capital i will continue to do business in
                                 the future because when i lost hope &nbsp;and your company
@@ -553,7 +542,8 @@
                                 <h5 class="card-title">
                                     I have poor credit. Will I still be approved?
                                 </h5>
-                                <img src="https://d9hhrg4mnvzow.cloudfront.net/getfunded.zipfunding.co/b2ef8a72-svgexport-12_1000000000000000000028.png">
+                                <img
+                                    src="https://d9hhrg4mnvzow.cloudfront.net/getfunded.zipfunding.co/b2ef8a72-svgexport-12_1000000000000000000028.png">
                             </div>
 
                             <p class="card-text">
@@ -623,7 +613,7 @@
     <div class="container-fluid contact_container">
         <div class="container py-4">
             <div class="contact">
-                <h2>Contact Us <img style="margin-bottom: 15px;"src="./img/rocket.png"></h2>
+                <h2>Contact Us <img style="margin-bottom: 15px;" src="./img/rocket.png"></h2>
             </div>
         </div>
     </div>

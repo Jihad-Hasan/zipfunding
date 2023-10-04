@@ -1,71 +1,47 @@
-
 var step = 1;
+var fundingNeed, timeInBusiness, avgBankingDeposits, creditScore, hasBusinessChecking, email, firstName, lastName, phoneNumber, companyName, businessIndustry;
 
 $(document).ready(function () {
   stepProgress(step);
 });
 
-$(".next").on("click", function () {
-  // Perform validation before proceeding to the next step
+$(".action").on("click", function () {
   if (!validateFields(step)) {
-    alert('Please fill in all the fields.');
     return;
   }
-
-
   if (step < $(".step").length) {
+    updateSelectedValues(step);
+
     $(".step").hide();
     $(".step").eq(step).show();
     stepProgress(++step);
   }
-console.log(step)
-  hideButtons(step);
 });
 
-
-
-
-
-function nextStepWithValidation(step) {
-    if (step === 6) {
-        var email = $("#email-step-6").val();
-        if (!validateEmail(email)) {
-            alert('Please enter a valid email.');
-            return;  // Stop here if email is invalid
-        }
-    } else if (step === 10) {
-        var phone = $("#phone-step-10").val();
-        if (!validatePhoneNumber(phone)) {
-            alert('Please enter a valid phone number.');
-            return;  // Stop here if phone number is invalid
-        }
+function nextStepWithValidation() {
+  if (step === 6) {
+    var email = $("#email-step-6").val();
+    if (!validateEmail(email)) {
+      $("#email-step-6").addClass("form-control-red");
+      return;
     }
-
-    // Move to the next step
-    if (step < $(".step").length) {
-        $(".step").hide();
-        $(".step").eq(step).show();
-        stepProgress(++step);
+  } else if (step === 9) {
+    var phone = $("#phone-step-10").val();
+    if (!validatePhoneNumber(phone)) {
+      $("#phone-step-10").addClass("form-control-red");
+      return;
     }
+  }
+  updateSelectedValues(step);
 
-    hideButtons(step);
+  $(".step").hide();
+  $(".step").eq(step).show();
+  stepProgress(++step);
 }
 
 
 
 
-
-
-// ON CLICK BACK BUTTON
-$(".back").on("click", function () {
-  if (step > 1) {
-    step = step - 2;
-    $(".next").trigger("click");
-  }
-  hideButtons(step);
-});
-
-// CALCULATE PROGRESS BAR
 stepProgress = function (currstep) {
   var percent = parseFloat(100 / $(".step").length) * currstep;
   percent = percent.toFixed();
@@ -73,39 +49,29 @@ stepProgress = function (currstep) {
     .css("width", percent + "%");
 };
 
-// DISPLAY AND HIDE "NEXT", "BACK" AND "SUMBIT" BUTTONS
-hideButtons = function (step) {
-  var limit = parseInt($(".step").length);
-  $(".action").hide();
-  if (step < limit) {
-    $(".next").show();
-  }
-  if (step > 1) {
-    $(".back").show();
-  }
-  if (step == limit) {
-    $(".next").hide();
-    $(".submit").show();
-  }
-};
-
-// Validate the input fields for the current step
-if(step !==6 || step !== 10){
+$(".step select input").on("change", function () {
+  $(this).removeClass("form-control-red");
+});
 
 function validateFields(step) {
+
   var isValid = true;
-  var currentStepFields = $(".step").eq(step - 1).find("select, input");
+  var currentStepFields = $(".step").eq(step - 1).find("#validation");
 
   currentStepFields.each(function () {
     if ($(this).val() === '') {
       isValid = false;
-      return false; // Stop the loop on first empty field
+      $(this).addClass("form-control-red");
+      return false;
+    } else {
+      $(this).removeClass("form-control-red");
     }
   });
 
   return isValid;
 }
-}
+
+
 // Validate email format
 function validateEmail(email) {
   var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -114,12 +80,85 @@ function validateEmail(email) {
 
 // Validate phone number format
 function validatePhoneNumber(phoneNumber) {
-  var phoneRegex = /^\d{10}$/; // Change this regex based on your phone number format
+  var phoneRegex = /^\d{11}$/; // Change this regex based on your phone number format
   return phoneRegex.test(phoneNumber);
 }
 
-// Validate email and phone number on the last step
-$(".submit").on("click", function () {
-  // Handle submission logic here
-  alert('Form submitted successfully!');
-});
+// Object to hold all the data
+const formData = {
+  fundingNeed: '',
+  timeInBusiness: '',
+  avgBankingDeposits: '',
+  creditScore: '',
+  hasBusinessChecking: '',
+  email: '',
+  firstName: '',
+  lastName: '',
+  phoneNumber: '',
+  companyName: '',
+  businessIndustry: ''
+};
+
+function sendToWebhook(data) {
+
+  fetch('', {
+      method: 'POST',
+      mode: "no-cors",
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    })
+    .then(response => {
+      console.log('Request sent. Status:', response.status);
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    });
+
+}
+
+
+function updateSelectedValues(step) {
+  switch (step) {
+    case 1:
+      formData.fundingNeed = $(".fundingNeed").val();
+      break;
+    case 2:
+      formData.timeInBusiness = $(".timeInBusiness").val();
+      break;
+    case 3:
+      formData.avgBankingDeposits = $(".avgBankingDeposits").val();
+      break;
+    case 4:
+      formData.creditScore = $(".creditScore").val();
+      break;
+    case 5:
+      formData.hasBusinessChecking = $("input[name='flexRadioDefault']:checked").val();
+      break;
+    case 6:
+      formData.email = $("#email-step-6").val();
+      break;
+    case 7:
+      formData.firstName = $(".firstName").val();
+      break;
+    case 8:
+      formData.lastName = $(".lastName").val();
+      break;
+    case 9:
+      formData.phoneNumber = $("#phone-step-10").val();
+      break;
+    case 10:
+      formData.companyName = $(".companyName").val();
+      break;
+    case 11:
+      formData.businessIndustry = $(".businessIndustry").val();
+      break;
+    default:
+      break;
+  }
+
+  if (step === 11) {
+    sendToWebhook(formData);
+  }
+}
